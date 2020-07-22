@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop System en HTML, CSS et VANILLA JS</title>
+
+    <!-- FONTS IMPORTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- LINKS CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section>
+
+        <div class="card-product">
+            <div class="container">
+                <div class="circle"><p> 75$ </p></div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./vans_PNG29-jaune.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h2 class="productName">Vans Shoes</h2>
+                        
+                        <div class="productSizes">
+                            <h4>Size:</h4>
+                            <span onclick="getSize(this, 7)" class="active">7</span>
+                            <span onclick="getSize(this, 8)">8</span>
+                            <span onclick="getSize(this, 9)">9</span>
+                            <span onclick="getSize(this, 10)">10</span>
+                        </div>
+                        <div class="productColor">
+                            <h4>Color:</h4>
+                            <span data-color="jaune" onclick="getColor(this, 'jaune')" class="active"></span>
+                            <span data-color="bleu" onclick="getColor(this, 'bleu')"></span>
+                            <span data-color="rouge" onclick="getColor(this, 'rouge')"></span>
+                        </div>
+                        <a href="#" onclick="addShoes()"> <i class="fa fa-plus"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="settings-product">
+            <div class="container">
+                <div class="card">
+                    <h2 style="margin-bottom: 5px;"> Votre commande: </h2>
+                    <div>
+                        <p> Voici le récapitulatif de votre commande : </p>
+                        <table style="margin: 15px 30px">
+                            <tbody>
+                                <tr>
+                                    <td class="nameTitle"> - Nom: <span class="name" style="font-weight: 700;"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sizeTitle"> - Taille: <span class="size" style="font-weight: 700;"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="colorTitle"> - Couleur: <span class="color" style="font-weight: 700;"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="priceTitle"> - Prix: <span class="price" style="font-weight: 700;"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href="#" class="buy" onclick="buyShoes()"> <span class="fa fa-shopping-bag"></span> Buy </a>
+                    <p class="reload"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
